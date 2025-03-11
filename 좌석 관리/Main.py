@@ -1,12 +1,7 @@
 import sys
-read = sys.stdin.readline
 import math
 
-N, M, Q = map(int, read().split(" "))
-seats = [[0 for j in range(M + 1)] for i in range(N + 1)]
-ate = []
-dx = [-1, 1, 0, 0]
-dy = [0, 0, -1, 1]
+read = sys.stdin.readline
 
 def allSeatsEmpty():
     for i in range(1, N + 1):
@@ -61,6 +56,12 @@ def getSeat():
                     x = X
                     y = Y
     return (x, y, flag)
+
+N, M, Q = map(int, read().split(" "))
+seats = [[0 for j in range(M + 1)] for i in range(N + 1)]
+ate = []
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
     
 for _ in range(Q):
     cmd, id = read().split(" ")
