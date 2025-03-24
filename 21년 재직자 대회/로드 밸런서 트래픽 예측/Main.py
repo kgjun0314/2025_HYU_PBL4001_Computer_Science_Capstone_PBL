@@ -33,8 +33,7 @@ graph = [[] for _ in range(N + 1)]
 for i in range(1, N + 1):
     line = list(map(int, read().split()))
     r[i] = line[0]
-    line.pop(0)
-    for e in line:
+    for e in line[1:]:
         graph[i].append(e)
 
 topology = topological_sort(graph)
